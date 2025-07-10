@@ -1,0 +1,917 @@
+<html lang="en"><head id="Head1"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"><title>
+	Orkestra - Süreç Yönetimi (2) 2.25.52.1
+</title><meta content="width=device-width, initial-scale=1" name="viewport">
+	<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><style>
+		form { opacity:0 }
+		div.modal-backdrop.fade.in {
+			width:100%;
+			height:100%;
+			position:fixed;
+			
+		}
+		.page-sidebar-closed .ninedotname { display:none; }
+	</style>
+    
+    <script>
+        var hidden, visibilityChange;
+        if (typeof document.hidden !== "undefined") {
+            hidden = "hidden";
+            visibilityChange = "visibilitychange";
+        } else if (typeof document.msHidden !== "undefined") {
+            hidden = "msHidden";
+            visibilityChange = "msvisibilitychange";
+        } else if (typeof document.webkitHidden !== "undefined") {
+            hidden = "webkitHidden";
+            visibilityChange = "webkitvisibilitychange";
+        };
+        function handleVisibilityChange() { window.isActive = document[hidden]; }
+        document.addEventListener(visibilityChange, handleVisibilityChange, false);
+    </script>            
+    
+    
+    
+    
+    
+	<script type="text/javascript">
+        window.onload = function () {
+            App.Utils.WarningMessage();
+        };
+    </script>
+    
+
+
+    <script src="/assets/plugins/jquery/jquery-3.6.1.min.js"></script>
+    <script src="/assets/plugins/jquery/jquery-migrate-3.4.0.min.js"></script>
+	<!--<script src="/assets/plugins/jquery-1.10.2.min.js"></script>-->
+   <!--<link href="/assets/plugins/font-awesome/css/fontawesome.min.css" rel="stylesheet" />-->
+    <link href="/assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+    <!--
+	<link  href="/assets/plugins/jstree/dist/themes/default/style.min.css" rel="stylesheet" type="text/css" />
+	<link  href="/assets/plugins/bootstrap-datepaginator/bootstrap-datepaginator2.css" rel="stylesheet" type="text/css" />
+    -->
+    <link href="/assets/plugins/jstree/dist/themes/default/style.min.css" rel="stylesheet" type="text/css">
+    <script src="/assets/scripts/core/app_loader.js" type="text/javascript"></script>
+    <script type="text/javascript">App.Root = "./";</script>
+    <!-- END PAGE LEVEL PLUGIN STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link href="assets/css/pages/none.css" rel="stylesheet">
+    <link href="/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="/add_min.css?v=638876790198589148" rel="stylesheet" type="text/css">
+
+    <!-- USER -->
+    <link href="assets/css/customer.css?v=1" rel="stylesheet">
+    <!-- END THEME STYLES -->
+	
+
+
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body class="page-header-fixed page-sidebar-fixed modal-open" data-sid="211|4c0afed61fce4db985629fdea0fd3b537d120f390c934298b64bf9be9e0f36fa" data-path="./" style="overflow: hidden;">
+    <form method="post" action="./" id="form1" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="O9QFHwQpxq5S9WruUkt7eS7scfTqLX3LDg/xaXYdmfHqCdGxYly1S8K9rFwMmRj9sWCsbz6YNK5CscvtYB9/zewxa2kcasAbdd4f+/5TaSsGYmkPIIOrrhgY0kBwWj4C">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZBcougawGnnzsa-5geA-H5rr5i1kof49RXotPvo190uUuTyYo0EHtDIaQxbiLMTAxg2&amp;t=638563379773552689" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQhFlyMew801_W5tzvNO0pfPX1Zq9VSORgCLOoESaba-hb_8DSaXkeK6zwIQxr-kGv23Wtsax7caN-lc0ukEt-_2-ixHiQpIdQefrSgCMN9ERJdtOw1FK73KCt0_M6y615rsxOIIC__NYeepAWvFAVKc1&amp;t=ffffffffc820c398" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=JnUc-DEDOM5KzzVKtsL1tafBp0EYC6kne_0yUa2LOM5u7NNwlUkUVrzCHjqR_U5SkQiRnlwUwCQoq0nwUZ87rB6JYOXstJ_vF2fhNmqZ0L8JzJCV852vvjbQPQ2RoTFHlL1MhZPE4UlbRppDy0XPuP4D4vbiHCRygdtk3NInIH4RTl0yRxL895KTo3m9LcqZ0&amp;t=ffffffffc820c398" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager1', 'form1', [], [], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+        
+    <style>
+        html, body, form, .page-container, .page-content {
+            height: 100%;
+        }
+
+
+	div.tile-object { 
+		line-height:14px;
+	}
+	
+	body > .blockUI  > .loading-message, .table-container  > .blockUI  > .loading-message {
+		background: white;
+	    height: 150px;
+	    width: 150px;
+	    border-radius: 50% !important;
+	}
+	
+	
+
+        html, body, form, .page-container, .page-content, .page-content-wrapper {
+            min-height: 100%;
+        }
+
+        .page-content-wrapper {
+            background: white;
+        }
+
+        #edit {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        div.list-group h5.list-group-item-heading {
+			line-height:40px;
+		}
+        .tile:hover {
+            border-color: transparent !important;
+            opacity: 0.65;
+        }
+        .tile.tile-sm {
+            box-shadow: 1px 1px 3px 0px #ccc;
+			border-radius: 15px !important;
+        }
+        table.table thead th.sorting {
+            background-color: rgb(242,242,242);
+            background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(251,251,255,1) 49%, rgba(255,255,255,1) 100%);
+        }
+        .dropdown-menu.top-main-menu {
+			max-width: 54%;
+		}
+		
+		.ninedot.menu {
+		  position: relative;
+		  width: 45px;
+		  height: 45px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+
+		.ninedot.menu .navigation {
+		  position: relative;
+		  width: 40px;
+		  height: 40px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  cursor: pointer;
+		  transition: 0.5s;
+		}
+
+		.ninedot.menu .navigation span {
+		  position: absolute;
+		  width: 5px;
+		  height: 5px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  background: #fff;
+		  transform: translate(calc(8px * var(--x)), calc(8px * var(--y)));
+		  transition: transform 0.5s, width 0.5s, height 0.5s;
+		  transition-delay: calc(0.1s * var(--i));
+		}
+    </style>
+
+    <div class="modal fade" tabindex="-1" data-focus-on="input:first" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-full">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var $u = {};
+        $u ={"FOCUS":null,"FOCUSES":[],"SID":"211|4c0afed61fce4db985629fdea0fd3b537d120f390c934298b64bf9be9e0f36fa","UID":1063,"FNAME":"Yusuf Sami Kaygusuz","UNAME":"yukaygusuz","ROLE":"101033","ROLEMARK":{"SET.m_rolename":"IT OPERATION (OPS)","SET.m_rolecode":"OPS_OPERATION","SET.m_unlimited_menu":"False","SET.m_studio_admin":"False","SET.m_sys_admin":"False","SET.id":"101033","KEY.m_created_by":"Gldnhrn LDAP","SET.m_created_by":"295","SET.m_created_dt":"2017-11-02 16:55:02.0000000","KEY.m_last_mod_by":"Sinem G&#252;neş","SET.m_last_mod_by":"773","SET.m_last_mod_dt":"2022-09-23 09:39:20.0000000","SET.m_active":"True","SET.m_private":"False","SET.p_show_portal":"False","SET.m_limited_permission":"False","SET.m_guid":"e52b1ea9-d0e5-4579-825b-925270ba33c8","num":"1"},"ROLEHM":[],"PAGEHM":[],"GROUPS":[126,150],"TID":211,"TNAME":"TAKAS","LID":100000,"LCODE":"tr-TR","AET":false,"IP":"172.30.98.92"};
+        var $r ="https://portal.takasbank.com.tr/";
+        var _PATH ="./";
+
+        //var pageWrap = document.getElementsByClassName('page-container'),
+        //pages = [].slice.call( pageWrap[0].querySelectorAll( 'div.page-content' ) ),
+        var IsPopup = false;
+    </script>
+    <!-- BEGIN HEADER -->
+        
+    <header class="header navbar navbar-fixed-top ">
+        <!-- BEGIN TOP NAVIGATION BAR -->
+        <div class="header-inner">
+
+            <!-- BEGIN LOGO -->
+            <a class="navbar-brand" href="/Default.aspx">
+                <img src="assets/img/logo/211.png" alt="logo" class="img-responsive" style="margin-left: 10px; margin-top: 5px;">
+            </a>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <img src="assets/img/menu-toggler.png" alt="">
+            </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <div class="sidebar-toggler-wrapper">
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <div class="sidebar-toggler hidden-phone">
+                </div>
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            </div>
+
+            <div class="col-lg-1 col-md-2 col-sm-3 create_button">
+                <button id="btn_create" type="button" class="btn" style="background-color: #2d2d2d; color: #fff; margin-top: 5px;"><i class="fa fa-plus-circle fa-lg" style="font-size: 20px;"></i>&nbsp;Oluştur</button>
+                <div class="select2-container select2-container-active form-control select2" id="s2id_select2_sample3" style="display: none; width: 260px;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">+ Değişiklik Bildirimi</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1"></div><input type="hidden" id="select2_sample3" class="form-control select2 select2-offscreen" style="display: none;" tabindex="-1" value="javascript:void(0);">
+            </div>
+
+            <div class="mega-menu-button" style="float: left">
+                <a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle dropdown-toggler hover-initialized" data-hover="megamenu-dropdown" data-close-others="true" style="">
+					<div class="ninedot menu">
+						<div class="navigation">
+						  <span style="--i:0; --x:-1; --y:0">
+						  </span>
+						  <span style="--i:1; --x:1; --y:0">
+						  </span>
+						  <span style="--i:2; --x:0; --y:-1">
+						  </span>
+						  <span style="--i:3; --x:0; --y:1">
+						  </span>
+						  <span style="--i:4; --x:-1; --y:1">
+						  </span>
+						  <span style="--i:5; --x:-1; --y:-1">
+						  </span>
+						  <span style="--i:6; --x:1; --y:-1">
+						  </span>
+						  <span style="--i:7; --x:1; --y:1">
+						  </span>   
+						  <span style="--i:8; --x:0; --y:0">
+						  </span>
+						</div>
+					</div>
+				</a>
+                <ul class="dropdown-menu top-main-menu">
+                    <li>
+                        <!-- Content container to add padding -->
+                        <div class="BubbleBeak"></div>
+                        <div class="mega-menu-content">
+                            <div class="col-md-12">
+                                <div class="tiles">
+                                <div class="row" style="padding-left:15px;padding-right:15px;"><h4>Çalışma Alanı</h4><div class="tile tile-sm bg-red selected" style="background-color:bg-red" title="My Workspace"><div class="corner"></div><div class="check"></div><div class="tile-body"><i class="fa fa-briefcase"></i></div><div class="tile-object"><div class="name">Çalışma Alanım(BT)</div></div></div></div><div class="row other" style="padding-left:15px;padding-right:15px;"><div class="tile tile-sm bg-blue-steel" style="background-color:bg-blue-steel"><div class="corner"></div><div class="check"></div><div class="tile-body"><i class="fa fa-book"></i></div><div class="tile-object"><div class="name">Veri Envanteri</div></div></div><div class="tile tile-sm #BE85FF" style="background-color:#BE85FF"><div class="corner"></div><div class="check"></div><div class="tile-body"><i class="fa fa-asterisk"></i></div><div class="tile-object"><div class="name">Ana Veri Yönetimi</div></div></div><div class="tile tile-sm bg-green" style="background-color:bg-green"><div class="corner"></div><div class="check"></div><div class="tile-body"><i class="fa fa-archive"></i></div><div class="tile-object"><div class="name">İSYS</div></div></div><div class="tile tile-sm bg-blue" style="background-color:bg-blue" title="Project And Portfolio Management"><div class="corner"></div><div class="check"></div><div class="tile-body"><i class="fa fa-tasks"></i></div><div class="tile-object"><div class="name">PPM</div></div></div><div class="tile tile-sm bg-red-haze" style="background-color:bg-red-haze"><div class="corner"></div><div class="check"></div><div class="tile-body"><i class="fa-brands fa-ravelry"></i></div><div class="tile-object"><div class="name">BPMS</div></div></div></div></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="hor-menu hidden-sm hidden-xs qdms-menu">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <ul class="nav navbar-nav pull-right">
+                <!-- BEGIN NOTIFICATION DROPDOWN -->
+                
+                <!-- END NOTIFICATION DROPDOWN -->
+                <!-- BEGIN INBOX DROPDOWN -->
+                
+                <!-- END INBOX DROPDOWN -->
+                <!-- BEGIN TODO DROPDOWN -->
+                
+<link href="/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+<li>
+    
+</li>
+
+
+
+
+
+<script src="/assets/scripts/custom/bar-to-do.js"></script>
+
+                <!-- END TODO DROPDOWN -->
+                <!-- BEGIN USER LOGIN DROPDOWN -->
+                
+
+<li class="dropdown delegation">
+    <div style="line-height: 27px; padding-top: 8px;">
+        <select id="select_delegation" class="form-control input-sm" style="font-size: 12px; padding: 3px; height: 25px;; border-radius: 5px !important; display: none;" onchange="setTimeout(changeDeleagation,0)">
+            
+        </select>
+    </div>
+</li>
+
+
+<li class="dropdown userroles">
+    <div style="line-height: 27px; padding-top: 8px;">
+        <select id="select_userroles" class="form-control input-sm" style="font-size: 12px; padding: 3px; height: 25px; border-radius: 5px !important" onchange="setTimeout(changeRole,0)">
+            <option value="101033">[ -- Roles -- ]</option><option selected="" value="101033">IT OPERATION (OPS)</option>
+        </select>
+    </div>
+</li>
+
+
+<li class="dropdown language">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><img alt="" src="/assets/img/flags/tr-TR.png"><span class="username">&nbsp;Türkçe</span><i class="fa fa-angle-down"></i></a><ul class="dropdown-menu"><li><a href="#" data-role="changeLocale"><img alt="100001" src="/assets/img/flags/en-US.png">&nbsp;English</a></li></ul>
+</li>
+<li class="dropdown tenant" style="padding-top: 0;"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"><span><span class="name" style="line-height:27px">TAKAS</span></span></a></li>
+<li class="dropdown user" style="padding-top: 0;"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><span><span class="username" style="line-height:27px">Yusuf Sami Kaygusuz</span><i class="fa fa-angle-down"></i></span></a><ul class="dropdown-menu"><li><a href="javascript:void(0);"><span><i class="fa fa-user"></i>Profilim</span></a></li><li><a href="javascript:void(0);"><span><i class="fa fa-users"></i> Delegasyon</span></a></li><li class="divider"></li><li><a href="javascript:void(0);" id="trigger_fullscreen"><span><i class="fa fa-arrows"></i>Tam Ekran</span></a></li><li><a href="javascript:void(0);"><span><i class="fa fa-info-circle"></i>Hakkında</span></a></li><li><a href="javascript:void(0);"><span><i class="fa fa-key"></i>Çıkış Yap</span></a></li></ul></li>
+<script src="/assets/scripts/custom/bar-user.js"></script>
+                <!-- END USER LOGIN DROPDOWN -->
+            </ul>
+            <!-- END TOP NAVIGATION MENU -->
+        </div>
+        <!-- END TOP NAVIGATION BAR -->
+    </header>
+    <!-- END HEADER -->
+    
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <!-- BEGIN SIDEBAR MENU -->
+        
+        <div class="page-sidebar-wrapper">
+            <div class="page-sidebar navbar-collapse collapse in" aria-expanded="true">
+                
+
+
+<script type="text/javascript">
+    $(function () {
+        
+        var body = $('body');
+        var i18NData = App.Utils.i18nData();
+
+        $('a.toggler').attr('title', i18NData.Tooltip.AutoHide[window.$u.LCODE]);
+
+        if ($.cookie('sidebar_closed') === '1') {
+            $('a.toggler > i').addClass('fa-thumb-tack fa-rotate-90');
+        } else {
+            $('a.toggler > i').addClass('fa-thumb-tack');
+        }
+
+        $('.page-sidebar-menu a.toggler').click(function (e) {
+            e.preventDefault();
+            var sidebar = $('.page-sidebar');
+
+            if (body.hasClass('page-sidebar-closed') || body.hasClass('page-sidebar-hover-on')) {
+                $(this).find('i').removeClass('fa-rotate-90');
+
+                if ($.cookie) {
+                    $.cookie('sidebar_closed', '0');
+                }
+
+                body.removeClass('page-sidebar-closed');
+                body.removeClass('page-sidebar-hover-on');
+            }
+            else {
+                $(this).find('i').addClass('fa-rotate-90');
+
+                if (body.hasClass('page-sidebar-fixed')) {
+                    sidebar.css('width', '');
+                }
+
+                if ($.cookie) {
+                    $.cookie('sidebar_closed', '1');
+                }
+
+                body.addClass('page-sidebar-closed');
+            }
+
+            //if ((body.hasClass("page-sidebar-hover-on") && body.hasClass('page-sidebar-fixed')) || sidebar.hasClass('page-sidebar-hovering')) {
+            //    body.removeClass('page-sidebar-hover-on');
+            //    sidebar.css('width', '').hide().show();
+            //    handleSidebarAndContentHeight(); //fix content & sidebar height
+            //    if ($.cookie) {
+            //        $.cookie('sidebar_closed', '0');
+            //    }
+            //    e.stopPropagation();
+            //    runResponsiveHandlers();
+            //    return;
+            //}
+
+            $(".sidebar-search", sidebar).removeClass("open");
+
+            //if (body.hasClass("page-sidebar-closed")) {
+            //    body.removeClass("page-sidebar-closed");
+            //    if (body.hasClass('page-sidebar-fixed')) {
+            //        sidebar.css('width', '');
+            //    }
+            //    if ($.cookie) {
+            //        $.cookie('sidebar_closed', '0');
+            //    }
+            //} else {
+            //    body.addClass("page-sidebar-closed");
+            //    if ($.cookie) {
+            //        $.cookie('sidebar_closed', '1');
+            //    }
+            //}
+            //handleSidebarAndContentHeight(); //fix content & sidebar height
+            //runResponsiveHandlers();
+        });
+
+        
+    });
+</script>
+
+<script type="text/javascript">
+	$(function () {
+		var cmnFilter = [];
+		App.Data.fetch("cmn_filter", ["#%m_active%#='True'"], ["p_rel_page","p_rel_page.m_obj_name","p_name","id"], [], 0, 0, function (data) {
+			if (data.Items != null) {
+				$.each(data.Items, function (index, item) {
+					cmnFilter[index] = new Object({
+						id: item["SET.id"],
+						parent: item["SET.p_rel_page.m_obj_name"],
+						page: item["SET.p_rel_page"],
+						name: item["SET.p_name"],
+						link: "Edit/cmn_filter/"+item["SET.id"]
+					});
+				});
+			}
+		}, false);
+		$.session.set("cmn", JSON.stringify(cmnFilter));
+		var cmnFilt =  JSON.parse($.session.get("cmn"));
+		
+		//$(".page-sidebar-menu",".slimScrollDiv").append("<li class='myFilter' style='border-left: 3px solid rgb(224, 34, 34)'></li>");
+		$(".myFilter",".page-sidebar-menu").append("<a><i class='fa fa-filter'></i><span class='title'>"+(window.$u.LCODE==='tr-TR' ? 'Filtrelerim' : 'My Filter')+"</span><span class='arrow'></span></a>")
+		$(".myFilter",".page-sidebar-menu").append("<ul class='sub-menu'></ul>")
+		var index = [];
+		for(var i = 0 ;i<cmnFilt.length;i++){
+			if(!($("."+(cmnFilt[i].page)).length>0)){
+				index.push(i);
+				$(".sub-menu",".myFilter").append("<li class="+(cmnFilt[i].page)+"><a><i></i><span class='title arrow'>"+cmnFilt[i].parent+"</span></a></li>");
+			}
+		}
+		for(var i=0; i<index.length; i++){
+			$("."+(cmnFilt[index[i]].page)).append("<ul class='sub-menu'></ul>")
+		}
+		for(var j = 0; j<index.length; j++){
+			for(var i = 0 ;i<cmnFilt.length;i++){
+				if(cmnFilt[index[j]].page === cmnFilt[i].page)
+					$(".sub-menu","."+(cmnFilt[index[j]].page)).append("<li><a href="+cmnFilt[i].link+"><span class='title'>"+cmnFilt[i].name+"</span></a></li>")
+			}
+		}
+		
+	});
+</script>
+
+<ul id="FormPlaceHolder_gldn_menu_menu" class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200" data-keep-expanded="true" menuid="147121">
+
+    <li class="sidebar-search-wrapper" style="">
+        <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+        
+        <p class="text-center"><a href="javascript:void(0);" class="toggler" title="Otomatik Gizle"><i class="fa fa-thumb-tack"></i></a></p>
+		
+		<p class="ninedotname" style="color: rgb(255, 255, 255); font-weight: bold; padding-left: 50px; margin-right: 25px; margin-left: -25px; line-height: 32px; text-shadow: black 1px 1px; font-size: 115%; width: 100%; user-select: none; background-image: initial !important; background-position: initial !important; background-size: initial !important; background-repeat: initial !important; background-attachment: initial !important; background-origin: initial !important; background-clip: initial !important; background-color: rgb(224, 34, 34); border-radius: 8px !important;" data-toggle="tooltip" data-placement="bottom" title="My Workspace" data-original-title="My Workspace">Çalışma Alanım(BT)</p>
+		
+        <div class="sidebar-search">
+            <div class="form-container">
+                <div class="input-box">
+                    <a href="javascript:;" class="remove"></a>
+                    <span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr;"><input type="text" class="tt-hint" disabled="" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(61, 61, 61);"><input type="text" placeholder="Arama..." id="search" class="tt-input" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, &quot;Open Sans&quot;, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;"><div class="tt-dataset-0"></div></span></span>
+                    <input type="button" class="submit" value=" ">
+                </div>
+                
+            </div>
+        </div>
+        <!-- END RESPONSIVE QUICK SEARCH FORM -->
+    </li>
+	
+
+    <li style="border-left: 3px solid rgb(224, 34, 34);" menuid="147183" parentmenu="true"><a href="javascript:;"><i class="fa-solid fa-square-check"></i><span class="title">Kayıtlarım</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147319" parentmenu="true"><a href="./default.aspx#/search/cmn_user_actvty_log?af=&amp;__advancedfiltercode=ADVQ-000022&amp;MID=147319"><i></i><span class="title">Tüm Kayıtlarım</span></a></li><li menuid="147216" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Talep Ettiklerim</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147222" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List?af=&amp;__advancedfiltercode=ADVQ-000304&amp;MID=147222"><i></i><span class="title">Açık</span></a></li><li menuid="147202" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List?af=&amp;__advancedfiltercode=ADVQ-000044&amp;MID=147202"><i></i><span class="title">Tüm Kayıtlar</span></a></li></ul></li><li menuid="147192" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Bana Atanan</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147193" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List?af=&amp;__advancedfiltercode=ADVQ-000305&amp;MID=147193"><i></i><span class="title">Açık</span></a></li><li menuid="147198" parentmenu="true"><a href="./default.aspx#/search/cmn_user_actvty_log?af=&amp;__advancedfiltercode=ADVQ-000043&amp;MID=147198"><i></i><span class="title">Tüm Kayıtlar</span></a></li></ul></li><li menuid="147191" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Onay/Aksiyon</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147190" parentmenu="true"><a href="./default.aspx#/search/cmn_user_actvty_log?af=&amp;__advancedfiltercode=ADVQ-000411&amp;MID=147190"><i></i><span class="title">Bekleyenler</span></a></li><li menuid="147189" parentmenu="true"><a href="./default.aspx#/search/cmn_user_actvty_log?af=&amp;__advancedfiltercode=ADVQ-000171&amp;MID=147189"><i></i><span class="title">Tamamlananlar</span></a></li></ul></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="147137" parentmenu="true"><a href="javascript:;"><i class="fa-solid fa-square-check"></i><span class="title">Birimimin Kayıtları</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147320" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List?af=&amp;__advancedfiltercode=ADVQ-000018&amp;MID=147320"><i></i><span class="title">Tüm Kayıtlar</span></a></li><li menuid="147245" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Birimimin Talep Ettikleri</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147253" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List?af=&amp;__advancedfiltercode=ADVQ-000301&amp;MID=147253"><i></i><span class="title">Açık</span></a></li><li menuid="147264" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List_Detailed?af=&amp;__advancedfiltercode=ADVQ-000045&amp;MID=147264"><i></i><span class="title">Tüm Kayıtlar</span></a></li></ul></li><li menuid="147138" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Birimime Atananlar</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147246" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List?af=&amp;__advancedfiltercode=ADVQ-000271&amp;MID=147246"><i></i><span class="title">Atanmamış Açık Kayıtlar</span></a></li><li menuid="147263" parentmenu="true"><a href="./default.aspx#/search/SMSS_Unified_List?af=&amp;__advancedfiltercode=ADVQ-000082&amp;MID=147263"><i></i><span class="title">Atanmış Açık Kayıtlar</span></a></li><li menuid="147290" parentmenu="true"><a href="./default.aspx#/search/cmn_user_actvty_log?af=&amp;__advancedfiltercode=ADVQ-000046&amp;MID=147290"><i></i><span class="title">Tüm Kayıtlar</span></a></li></ul></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="147033" parentmenu="true"><a href="javascript:;"><i class="fa fa-search-plus"></i><span class="title">Bulgu Yönetimi</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147034" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Bana veya Ekibime Atananlar</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="147475" parentmenu="true"><a href="./default.aspx#/search/GRCS_Finding?af=&amp;__advancedfiltercode=ADVQ-000320&amp;MID=147475"><i></i><span class="title">Açık</span></a></li><li menuid="147474" parentmenu="true"><a href="./default.aspx#/search/GRCS_Finding?af=&amp;__advancedfiltercode=ADVQ-000012&amp;MID=147474"><i></i><span class="title">Tüm Bulgular</span></a></li></ul></li><li menuid="148873" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Bulgu Aksiyon Talep ve Görevleri</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="148874" parentmenu="true"><a href="./default.aspx#/search/GRCS_Finding_Action_Request?af=&amp;__advancedfiltercode=ADVQ-000332&amp;MID=148874"><i></i><span class="title">Açık</span></a></li><li menuid="148875" parentmenu="true"><a href="./default.aspx#/search/GRCS_Finding_Action_Request?af=&amp;__advancedfiltercode=ADVQ-000007&amp;MID=148875"><i></i><span class="title">Tüm Talepler</span></a></li><li menuid="148878" parentmenu="true"><a href="./default.aspx#/search/cmn_task?af=&amp;__advancedfiltercode=ADVQ-000380&amp;MID=148878"><i></i><span class="title">Atanan Görevler</span></a></li></ul></li><li menuid="147484" parentmenu="true"><a href="./default.aspx#/search/GRCS_Finding_Review?af=&amp;__advancedfiltercode=ADVQ-000214&amp;MID=147484"><i></i><span class="title">Bulgu İncelemeleri</span></a></li><li menuid="147454" parentmenu="true"><a href="./default.aspx#/tabular/101050?MID=147454"><i></i><span class="title">Otorite Gereksinimleri</span></a></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="148909" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Sürekli İyileştirme Yönetimi</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="148914" parentmenu="true"><a href="./default.aspx#/search/TCPS_Demand_Requirement?af=&amp;__advancedfiltercode=ADVQ-000349&amp;MID=148914"><i></i><span class="title">Bana ve Ekibime Atanan Açık İyileştirmeler</span></a></li><li menuid="148915" parentmenu="true"><a href="./default.aspx#/search/TCPS_Demand_Requirement?af=&amp;__advancedfiltercode=ADVQ-000066&amp;MID=148915"><i></i><span class="title">Bana ve Ekibime Atanan Tüm İyileştirmeler</span></a></li><li menuid="148918" parentmenu="true"><a href="./default.aspx#/search/TCPS_Demand_Requirement?af=&amp;__advancedfiltercode=ADVQ-000192&amp;MID=148918"><i></i><span class="title">Benim ve Ekibimin Açtığı Açık İyileştirmeler</span></a></li><li menuid="148920" parentmenu="true"><a href="./default.aspx#/search/TCPS_Demand_Requirement?af=&amp;__advancedfiltercode=ADVQ-000193&amp;MID=148920"><i></i><span class="title">Benim ve Ekibimin Açtığı Tüm İyileştirmeler</span></a></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="148858" parentmenu="true"><a href="javascript:;"><i class="fa-solid fa-square-check"></i><span class="title">Toplantı Yönetimi</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="148861" parentmenu="true"><a href="./default.aspx#/search/cmn_appointment?MID=148861"><i></i><span class="title">Toplantılar</span></a></li><li menuid="148859" parentmenu="true"><a href="./default.aspx#/search/cmn_task?af=&amp;__advancedfiltercode=ADVQ-000387&amp;MID=148859"><i></i><span class="title">Bana veya Grubuma Atanan Toplantı Aksiyonları</span></a></li><li menuid="148860" parentmenu="true"><a href="./default.aspx#/search/cmn_task?af=&amp;__advancedfiltercode=ADVQ-000385&amp;MID=148860"><i></i><span class="title">Atadığım Toplantı Aksiyonları</span></a></li><li menuid="148866" parentmenu="true"><a href="./default.aspx#/search/cmn_task?af=&amp;__advancedfiltercode=ADVQ-000383&amp;MID=148866"><i></i><span class="title">Tüm Toplantı Aksiyonları</span></a></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="148893" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Servis Katalogu</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="149053" parentmenu="true"><a href="javascript:void(0);"><i></i><span class="title">Servis Kataloğu Kullanım Kılavuzu</span></a></li><li menuid="148894" parentmenu="true"><a href="./default.aspx#/search/LCMCMS_Service?MID=148894"><i></i><span class="title">Liste Görünümü</span></a></li><li menuid="148895" parentmenu="true"><a href="./default.aspx#/tabular/100037?MID=148895"><i></i><span class="title">Servis Portföy &gt; Servis (Business &amp; Customer Facing Service)</span></a></li><li menuid="148896" parentmenu="true"><a href="./default.aspx#/tabular/1?MID=148896"><i></i><span class="title">Portföy &gt; Alt Portföy &gt; Servis</span></a></li><li menuid="149032" parentmenu="true"><a href="./default.aspx#/search/LCMCMS_Relation_S2S?MID=149032"><i></i><span class="title">Servisler Arası İlişki</span></a></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="149056" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Uygulama Envanteri</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="149075" parentmenu="true"><a href="javascript:void(0);"><i></i><span class="title">Uygulama Envanteri Kullanım Kılavuzu</span></a></li><li menuid="149057" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Uygulama</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="149060" parentmenu="true"><a href="./default.aspx#/search/lcmcms_billofsvc?af=&amp;__advancedfiltercode=ADVQ-000502&amp;MID=149060"><i></i><span class="title">Açık</span></a></li><li menuid="149061" parentmenu="true"><a href="./default.aspx#/search/lcmcms_billofsvc?af=&amp;__advancedfiltercode=ADVQ-000503&amp;MID=149061"><i></i><span class="title">Kapalı</span></a></li><li menuid="149062" parentmenu="true"><a href="./default.aspx#/search/lcmcms_billofsvc?MID=149062"><i></i><span class="title">Tümü</span></a></li></ul></li><li menuid="149058" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Paket</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="149063" parentmenu="true"><a href="./default.aspx#/search/lcmcms_billofsvcitem?af=&amp;__advancedfiltercode=ADVQ-000504&amp;MID=149063"><i></i><span class="title">Açık</span></a></li><li menuid="149064" parentmenu="true"><a href="./default.aspx#/search/lcmcms_billofsvcitem?af=&amp;__advancedfiltercode=ADVQ-000505&amp;MID=149064"><i></i><span class="title">Kapalı</span></a></li><li menuid="149065" parentmenu="true"><a href="./default.aspx#/search/lcmcms_billofsvcitem?MID=149065"><i></i><span class="title">Tümü</span></a></li></ul></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="149034" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Sevis Altyapı Bileşeni (SIMS)</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="149035" parentmenu="true"><a href="./default.aspx#/search/LCSIMS_ServiceInstance?af=&amp;__advancedfiltercode=ADVQ-000501&amp;MID=149035"><i></i><span class="title">Liste Görünümü</span></a></li><li menuid="148869" parentmenu="true"><a href="./default.aspx#/tabular/101100?MID=148869"><i></i><span class="title">Servis - SI İlişkisi</span></a></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="149023" parentmenu="true"><a href="javascript:;"><i></i><span class="title">Problemler</span><span class="arrow"></span></a><ul class="sub-menu"><li menuid="149025" parentmenu="true"><a href="./default.aspx#/search/SMSS_Problem?MID=149025"><i></i><span class="title">Tüm Problemler</span></a></li><li menuid="149024" parentmenu="true"><a href="./default.aspx#/search/SMSS_KEDB?MID=149024"><i></i><span class="title">Bilinen Hatalar Veritabanı</span></a></li></ul></li><li style="border-left: 3px solid rgb(224, 34, 34);" menuid="148927" parentmenu="true"><a href="./default.aspx#/search/LCCIMS_Asset_Item?af=&amp;__advancedfiltercode=ADVQ-000268&amp;MID=148927"><i></i><span class="title">Zimmetlerim</span></a></li></ul>
+
+            </div>
+        </div>
+        
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper"><a href="javascript:;" id="dashboardEditorButton" class="btn btn-default pull-right" style="display: none;"><i class="fa fa-cog"><i></i></i></a>
+            
+
+            <div class="page-content" style="overflow:auto;min-height:633px !important; background-color:rgb(239, 239, 239) !important;"><div class="row"><ul class="dasboard-tab" style="padding:7px;width:100%;margin-bottom:5px;"><li class="title"><a href="javascript:;"><span><img src="../../assets/img/home.png"> Başlangıç</span></a></li><li class="pull-right"><a href="javascript:;"><span><i class="fa fa-window-close" aria-hidden="true"></i></span></a></li><li class="pull-right"><a href="javascript:;"><span><i class="fa fa-copy" aria-hidden="true"></i></span></a></li><div class="form-group hide animated" style="position:absolute;z-index:9;top:60px;right:50px;width:350px;"><div class="input-icon right"><i class="fa fa-search"></i><input name="DynamicCaseSearch" placeholder="Aramak istediğiniz sistem öğesini yazınız" class="form-control ui-autocomplete-input" style="height:40px;box-shadow:0 0 10px rgba(0, 0, 0, 0.5);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);" autocomplete="off"></div></div><li class="pull-right" style="border-right: 1px solid #f0f0f0"><a href="javascript:;"><span><i class="fa fa-search" style="font-size:16px" aria-hidden="true"></i></span></a></li><li><a href="javascript:void(0);"><span>Veri Tabanı ve Orta Katman Uyarlama/Güncelleme</span></a></li></ul></div><div class="row"><div class="col-md-12"><div class="icon1" style="width: 80px; height: 80px; float: left"><i class="fa fa-database fa-5x" style="line-height: 65px;color:#383373"></i> </div><h3 class="page-title">Veri Tabanı ve Orta Katman Uyarlama/Güncelleme <br><small></small></h3></div><hr><div class="col-md-12"><div class="list-group"><a href="javascript:;" class="list-group-item" style="height:57px;"><span><div class="icon" style="width: 40px; height: 40px; float: left;color:#ff0000"><i class="fa fa-angle-double-right fa-2x" style="line-height:40px"></i></div><h5 style="line-height:18px" class="list-group-item-heading"><strong>Obje Aktarımı (DBRunner)</strong></h5></span><p class="list-group-item-text"></p></a><a href="javascript:;" class="list-group-item" style="height:57px;"><span><div class="icon" style="width: 40px; height: 40px; float: left;color:#ff0000"><i class="fa fa-angle-double-right fa-2x" style="line-height:40px"></i></div><h5 style="line-height:18px" class="list-group-item-heading"><strong>Script Çalıştırma (DBRunner)</strong></h5></span><p class="list-group-item-text"></p></a><a href="javascript:;" class="list-group-item" style="height:57px;"><span><div class="icon" style="width: 40px; height: 40px; float: left;color:#ff0000"><i class="fa fa-angle-double-right fa-2x" style="line-height:40px"></i></div><h5 style="line-height:18px" class="list-group-item-heading"><strong>Manuel Script Çalıştırma (DBRunner dışı)</strong></h5></span><p class="list-group-item-text"></p></a><a href="javascript:;" class="list-group-item" style="height:57px;"><span><div class="icon" style="width: 40px; height: 40px; float: left;color:#ff0000"><i class="fa fa-angle-double-right fa-2x" style="line-height:40px"></i></div><h5 style="line-height:18px" class="list-group-item-heading"><strong>Tablo yaratma/Data aktarma</strong></h5></span><p class="list-group-item-text"></p></a><a href="javascript:;" class="list-group-item" style="height:57px;"><span><div class="icon" style="width: 40px; height: 40px; float: left;color:#ff0000"><i class="fa fa-angle-double-right fa-2x" style="line-height:40px"></i></div><h5 style="line-height:18px" class="list-group-item-heading"><strong>Şema Import</strong></h5></span><p class="list-group-item-text"></p></a><a href="javascript:;" class="list-group-item" style="height:57px;"><span><div class="icon" style="width: 40px; height: 40px; float: left;color:#ff0000"><i class="fa fa-angle-double-right fa-2x" style="line-height:40px"></i></div><h5 style="line-height:18px" class="list-group-item-heading"><strong>Orta Katman Uygulama Yükleme</strong></h5></span><p class="list-group-item-text"></p></a></div></div></div></div>
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+    
+    <footer class="footer" style="padding: 4px 20px 2px 14px; position: fixed; margin: 0; bottom: 0; left: 0; width: 100%; z-index: 99999; background: rgb(61,61,61); max-height: 28px;">
+        <!-- BEGIN COPYRIGHT -->
+        <div class="footer-inner">
+            <a href="http://www.gldnhrn.com" target="_blank" style="color: #fff; font-weight: bold">
+                <img src="/assets/img/logo/footer_logo.png" alt="" style="max-height: 20px;">
+            </a>
+        </div>
+        <!-- END COPYRIGHT -->
+        <div class="footer-tools">
+            <span class="go-top" style="float: right">
+                <i class="fa fa-angle-up" style="font-weight: bolder; font-size: 75%;"></i>
+            </span>
+            <span class="go-bottom" style="float: right">
+                <i class="fa fa-angle-down" style="font-weight: bolder; font-size: 75%;"></i>
+            </span>
+        </div>
+    </footer>
+    
+    </form>
+    <!-- END FOOTER -->
+    <!--[if lt IE 9]>
+	<script type="text/javascript" charset="utf-8" src="/assets/plugins/html5.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/assets/plugins/json2.js"></script>
+	<script src="/assets/plugins/respond.min.js"></script>
+	<script src="/assets/plugins/excanvas.js"></script> 
+	<![endif]-->
+    <!-- bundle1.js contains marked list -->
+    <!-- BUNDLE1 -->
+    
+    <!--<script src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js"></script> 
+    <!-- <script src="/assets/plugins/jquery-ui/jquery-ui.min.js"></script>-->
+    <script src="/assets/plugins/jquery-validation/dist/jquery.validate.js"></script>
+	
+    <script src="/assets/plugins/jquery-validation/dist/localization/messages_tr.js"></script>
+	<script src="/assets/plugins/lz-string/lz-string.js"></script>
+	
+	<script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/bundle_1.js?v=638876790198589148" type="text/javascript"></script>
+    <!-- BUNDLE1 -->
+    <!--<script type="text/javascript" src="/assets/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js"></script>-->
+    <script src="/assets/plugins/jstree/dist/jstree.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/bootstrap-datepaginator/bootstrap-datepaginator2.js" type="text/javascript"></script>
+    <script src="/assets/plugins/bootstrap-editable/bootstrap-editable/js/bootstrap-editable.min.js" type="text/javascript"></script>
+	<script src="/assets/plugins/jquery-input-mask-phone-number.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+	
+	<!--
+	 <script src="/app-app.js?v=638876790198589148" type="text/javascript"></script>
+	-->
+    <script src="/assets/scripts/core/app.js?v=76" type="text/javascript"></script>
+    <script src="/assets/scripts/core/app.customer.config.js" type="text/javascript"></script>
+    <script src="/assets/scripts/core/app.components.edit.js?v=3" type="text/javascript"></script>
+    <script src="/assets/scripts/core/app.components.menu.js" type="text/javascript"></script>
+    <script src="/assets/scripts/core/app.components.timesheet.approver.js" type="text/javascript"></script>
+	
+	<script src="/assets/scripts/core/app.components.menu.js" type="text/javascript"></script>
+	
+    <script src="assets/scripts/custom/none.js?v=286" type="text/javascript"></script>
+    <script src="/app-plugins.js" type="text/javascript"></script>
+    <script src="/app-plugins2.js" type="text/javascript"></script>
+    <script src="assets/scripts/custom/customer_header.js" type="text/javascript"></script>
+	
+	<script src="/assets/plugins/amcharts4/core.js"></script>
+	<script src="/assets/plugins/amcharts4/charts.js"></script>
+	<script src="/assets/plugins/amcharts4/themes/animated.js"></script>
+	
+    <script src="/assets/plugins/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/assets/plugins/tippy.js/dist/tippy-bundle.umd.js"></script>
+    
+    <!--<script src="/assets/plugins/Chart.js/Chart.bundle.js" type="text/javascript"></script>-->
+	<!--<script src="/assets/plugins/Chart.js/src/chart.js" type="text/javascript"></script>-->
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!--Timesheet-->
+    <!--Timesheet-->
+    <script src="/assets/scripts/custom/customer.js?v=4" type="text/javascript"></script>
+    
+    <script src="/assets/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.tr.js" charset="UTF-8" type="text/javascript"></script>
+    <!-- <script src="/assets/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.tr.js" charset="UTF-8" type="text/javascript"></script> -->
+    <script src="/assets/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.tr.min.js" charset="UTF-8" type="text/javascript"></script>
+    <script src="/assets/plugins/select2/i18n/select2_locale_tr.js" charset="UTF-8" type="text/javascript"></script>
+    
+
+    <!--Customer-->
+    
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init(); // initlayout and core plugins
+            App.Root = "./";
+            App.DefaultDateFormat = 'yyyy-MM-dd HH:mm:ss';
+            if (typeof (App.ActiveModule) != "undefined" && typeof (App.ActiveModule.init) != "undefined") App.ActiveModule.init();
+        });
+    </script>
+    
+    
+    
+    
+    
+
+    
+   
+    <!--<script type="text/javascript" src="assets/plugins/DataTables/DataTables-2.0.1/datatables.min.js"></script>-->
+    
+	
+    
+	
+	<script type="text/javascript" src="assets/plugins/jsPDF/jspdf.min.js"></script>	
+	<script type="text/javascript" src="assets/plugins/jsPDF/jspdf.debug.js"></script>
+	<script type="text/javascript" src="assets/plugins/html2canvas.min.js"></script>
+    <script src="/assets/plugins/angularjs/angular.min.js"></script>
+    <script src="/assets/plugins/angularjs/angular-sanitize.min.js"></script>
+    <script src="/assets/plugins/angularjs/angular-route.min.js"></script>
+    <script src="/assets/plugins/angularjs/angular-cookies.min.js"></script>
+    <script src="/assets/plugins/angularjs/ui-bootstrap-tpls-2.0.0.min.js"></script>
+    <script src="/assets/plugins/angularjs/ui-select/dist/select.min.js"></script>
+    <script src="/assets/plugins/angularjs/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
+    <script src="/assets/plugins/angularjs/ui-iconpicker/scripts/ui-iconpicker.min.js"></script>
+    <script src="/assets/plugins/angularjs/ngScrollSpy/ngScrollSpy.min.js"></script>
+    <script src="/assets/scripts/core/app.components.search.js" type="text/javascript"></script>
+
+    
+    <script src="./assets/scripts/custom/tasks.js" type="text/javascript"></script>
+    <script src="./assets/scripts/custom/index.js" type="text/javascript"></script>
+    
+    <script src="./assets/scripts/custom/VVM_Dashboard.js"></script>
+    <!-- EDIT by COK -->
+    <!-- EDIT PowerPoint Export -->
+    <!-- EDIT 05/11/2017 -->
+    <!-- vvv PptxGenJS libraries (jquery/jszip/pptxgen are required) vvv -->
+    
+
+
+    
+		<script src="/app-PptxGenJS.js" type="text/javascript"></script>
+    <!--
+    <script src="/assets/plugins/PptxGenJS/libs/jszip.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/PptxGenJS/libs/promise.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/PptxGenJS/dist/pptxgen.colors.js" type="text/javascript"></script>
+    <script src="/assets/plugins/PptxGenJS/dist/pptxgen.shapes.js" type="text/javascript"></script>
+    <script src="/assets/plugins/PptxGenJS/dist/pptxgen.js" type="text/javascript"></script>
+    <script src="/assets/plugins/PptxGenJS/dist/generatepptx.js" type="text/javascript"></script>
+    -->
+    <!-- End of EDIT by COK -->
+    <!--<link href="assets/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="assets/plugins/DataTables/DataTables-2.0.1/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+    
+    <!--<link href="assets/plugins/DataTables/Responsive-2.2.2/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />-->
+    <!--<link href="assets/plugins/DataTables/ColReorder-1.5.0/css/colReorder.dataTables.min.css" rel="stylesheet" type="text/css" />-->
+	<link href="assets/plugins/DataTables-2.0.3/Buttons-3.0.1/css/buttons.bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/DataTables-2.0.3/FixedColumns-5.0.0/css/fixedColumns.bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/DataTables-2.0.3/DataTables-2.0.3/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/DataTables-2.0.3/Responsive-3.0.0/css/responsive.bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/plugins/DataTables-2.0.3/ColReorder-2.0.0/css/colReorder.bootstrap.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Create Menu Startup - MOVE APP.JS later -->
+    <script type="text/javascript">           
+        $(document).ready(function () {
+            if (window.i18NData == undefined)
+                window.i18NData = App.Utils.i18nData();
+			
+			//Ninedot menu hove			
+			$("div.ninedot.menu>.navigation").hover(
+			  function() {
+				$(this).children("span").css("box-shadow","0px 0px 0.5px 0.5px #fff")
+			  }, function() {
+				$(this).children("span").css("box-shadow","")
+			  }
+			);
+
+            var data = [];
+            var lnkM2 = [];
+
+            var createButton = function () {
+				
+				
+				console.warn("lnkM2",lnkM2);
+				
+                if (lnkM2.length > 0) {
+                    var mm = new Bloodhound({
+                        datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d["name"]); },
+                        queryTokenizer: Bloodhound.tokenizers.whitespace,
+                        local: lnkM2
+                    });
+                    mm.initialize();
+                    $.each(mm.local, function (key) {
+                        var link1 = mm.local[key]["link"] ? mm.local[key]["link"].split("?") : mm.local[key]["link"];
+                        if (mm.local[key]["link"] && mm.local[key]["link"].length > 0)
+                            data.push({ 
+								id: link1[0], 
+								text: mm.local[key]["name"], 
+								order: mm.local[key]["order"] ? mm.local[key]["order"] : "-1",
+								icon: mm.local[key]["icon"], 
+								func: mm.local[key]["func"]  || mm.local[key]["function"] 
+							});
+                    });
+
+                    data = data.sort(function (a, b) {
+                        var valueA = parseInt(a.order);
+                        var valueB = parseInt(b.order);
+
+                        if (valueA < valueB) return -1;
+                        if (valueA > valueB) return 1;
+                        return 0;
+                    });
+                } else {
+                    var dt = handleMenuForCreate();
+                    if (dt && dt.length > 0) {
+                        var mm = new Bloodhound({
+                            datumTokenizer: function (d) { return Bloodhound.tokenizers.whitespace(d["name"]); },
+                            queryTokenizer: Bloodhound.tokenizers.whitespace,
+                            local: dt
+                        });
+                        mm.initialize();
+                        $.each(mm.local, function (key) {
+                            var link1 = mm.local[key]["link"] ? mm.local[key]["link"].split("?") : mm.local[key]["link"];
+                            if (mm.local[key]["link"] && mm.local[key]["link"].length > 0)
+                                data.push({ 
+									id: link1[0], 
+									text: mm.local[key]["name"], 
+									order: mm.local[key]["order"] ? mm.local[key]["order"] : "-1", 
+									icon: mm.local[key]["icon"], 
+									func: mm.local[key]["func"] || mm.local[key]["function"] 
+								});
+                        });
+
+                        data = data.sort(function (a, b) {
+                            var valueA = parseInt(a.order);
+                            var valueB = parseInt(b.order);
+
+                            if (valueA < valueB) return -1;
+                            if (valueA > valueB) return 1;
+                            return 0;
+                        });
+                    }
+                }
+            };
+
+            var btnCreate = $("#btn_create");
+
+            if (btnCreate.length > 0) {
+                btnCreate.html("<i class=\"fa fa-plus-circle fa-lg\" style=\"font-size: 20px;\"></i>&nbsp;" + window.i18NData.Button.Create[window.$u.LCODE]);
+                $("#select2_sample3").select2({
+                    data: data,
+                    width: "260px",
+                    language: window.$u.LCODE === "tr-TR" ? "tr" : "en",
+                    dropdownCss: { 'left': $("#btn_create").offset().left },
+                    formatResult: function (option) {
+                        return (option.icon ? '<i class="fa ' + option.icon + '"></i>&nbsp;' : "") + option.text;
+                    }
+                }).on("select2-selecting", function (e) {
+                    if (e.object.func != undefined) {
+                        var fn = new Function(e.object.func);
+                        fn();
+                    } else {
+                        var link = e.val.replace("/search", "create").replace("search", "create");
+						console.log(link);
+                        App.Utils.OpenPopup(App.Root + link, screen.width, screen.height);
+                    }
+                });
+
+                btnCreate.on("click", function () { $('#select2_sample3').select2("open"); });
+            }
+
+            var lnkM = [];
+            var tf = function (a, b) {
+                $.when(handleMenuLocales()).done(function (lc) {
+                    //console.log("-tf-",arguments,a);
+                    b = typeof b !== 'undefined' ? b : $('.classic-dd');
+                    var ps = false;
+                    for (var i = 0; i < a.length; i++) {
+                        var l091;
+                        var lk;
+                        var loc;
+
+                        if (a[i]['children'] != null && a[i]['children'].length > 0) {
+                            var c = $('<ul class="dropdown-menu">');
+                            l091 = a[i].link.replace('/search/', '/create/').split('?')[0].split('/');
+                            lk = l091[l091.length - 1];
+                            if ((a[i].administration === false && ((a[i].create != undefined && a[i].create === "True") || a[i].create == undefined)) && lk !== "" && $.inArray(lk, lnkM) === -1) {
+                                loc = lc.filter(function (b) { return b.id === a[i].id }); //console.log(lc,loc,lk);
+                                if (loc && loc.length > 0)
+                                    a[i].name = loc[0].name;
+                                lnkM2.push({ link: a[i].link, name: a[i].name, func: a[i].function, icon: a[i].icon, order: a[i].order });
+                                lnkM.push(lk);
+                            }
+                            c.appendTo($('<li class="dropdown-submenu"><a href="' + a[i].link.replace('/search/', '/create/') + '">' + a[i].name + '22</a></li>').appendTo(b));
+                            tf(a[i]['children'], c);
+                            ps = true;
+                        }
+                        else {
+							
+							
+                            l091 = a[i].link.replace('/search/', '/create/').split('?')[0].split('/');
+                            lk = l091[l091.length - 1];
+							if(a[i].link.indexOf("af")>-1)
+								console.warn(a[i].link, lk);
+                            //if((a[i].administration === false && ((a[i].create!=undefined && a[i].create==="True")|| a[i].create== undefined)) &&  lk !== "" && $.inArray(lk,lnkM) === -1){
+                            if ((a[i].administration === false && ((a[i].create != undefined && a[i].create === "True") || a[i].create == undefined)) && lk !== "") {
+                                loc = lc.filter(function (b) { return b.id === a[i].id }); //console.log(lc,loc,lk);
+                                if (loc && loc.length > 0)
+                                    a[i].name = loc[0].name;
+
+                                lnkM2.push({ link: a[i].link, name: a[i].name, func: a[i].function, icon: a[i].icon, order: a[i].order });
+                                lnkM.push(lk);
+                                ps = true;
+                                $('<li><a href="' + a[i].link.replace('/search/', '/create/') + '">' + a[i].name + '11</a></li>').appendTo(b);
+                            }
+                        }
+                    }
+                });
+            };
+
+            var tm = function (a, b, c) {
+                c = typeof c !== 'undefined' ? c : [];
+                b = typeof b !== 'undefined' ? b : { id: null };
+                var h = [];
+                var ws = $.session.get("menu-default");
+                if (ws == undefined)
+                    ws = 'My_Work_Space';
+
+                for (var t = 0; a && t < a.length; t++) {
+				//console.log("a[t]",a[t]);
+                    if (a[t].parent == b.id) {
+                        if (/*a[t].code!==ws&&*/a[t].code !== null && a[t].link!=null && a[t].link.indexOf("af=") === -1 ) //if(a[t].code!==ws&&a[t].code!==null&&a[t].link.indexOf("af=") === -1) 
+						{
+                            h.push(a[t]);
+						}
+					}
+				}
+							
+							
+                if (h.length > 0) {
+                    if (b.id == null) c = h;
+                    else b['children'] = h;
+                    for (var t = 0; t < h.length; t++)
+                        tm(a, h[t]);
+                }
+                return c;
+            };
+            window.tz = function () {
+                if ($.session.get("menu")) {
+                    var st = eval($.session.get("menu"));
+                    window.createMenu = tm(st);
+                    tf(window.createMenu);
+                    createButton([], lnkM, lnkM2);
+                }
+                else
+                    setTimeout(tz, 100);
+
+            };
+            
+        });
+    </script>
+	<script src="/assets/plugins/chart.js2023/chart.js"></script>
+    <!-- Create Menu Startup -->
+    <script src="/assets/plugins/echarts-4.7.0/dist/echarts.min.js"></script>    
+     <script src="/echart_theme.js?v=638876790198589148" type="text/javascript"></script>
+    <script src="/assets/scripts/custom/default.js?v=3"></script>
+    <script src="/assets/scripts/custom/master-data-request-fulfilment.js" type="text/javascript"></script>
+    	
+	
+	<script src="/assets/scripts/custom/dynamiccase.js?v=1" type="text/javascript"></script>
+	<script src="/app-plugins12.js" type="text/javascript"></script>
+    <!--
+    <script src="/assets/scripts/custom/dynamiccase.js" type="text/javascript"></script>
+    <script src="/assets/scripts/custom/VVM_Dashboard.js" type="text/javascript"></script>
+    <script src="/assets/scripts/custom/CMN_work_Dashboard.js" type="text/javascript"></script>
+    <script src="/assets/plugins/jquery.floatThead.js"></script>
+    <script src="/assets/scripts/custom/TimeSchedule.js" type="text/javascript"></script>
+    -->
+    <iframe id="loader" style="display: none; border: 0 none; position: absolute; top: 50%; left: 50%; margin-left: -50px; margin-top: -50px; width: 100px; height: 100px;"></iframe>
+    
+	<link href="/minified.css?v=638876790198589148" charset="utf-8" rel="stylesheet" type="text/css">
+	<style>
+		form { opacity:1 }
+	</style>
+	<link rel="preload" href="/assets/fonts/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="/assets/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <!--<link rel="preload" href="/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>-->
+    <link rel="preload" href="/assets/plugins/font-awesome/fonts/fa-brands-400.woff2?v=4.7.0" type="text/javascript">
+    
+    <!--<script src="/assets/plugins/pivottable/dist/pivot.js" type="text/javascript"></script>
+    <script src="/assets/plugins/pivottable/dist/pivot.tr.js" type="text/javascript"></script>
+    <script src="/assets/plugins/pivottable/dist/gchart_renderers.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/pivottable/dist/export_renderers.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/assets/plugins/pivottable/dist/pivot.css" crossorigin>-->
+    
+    <!--<script src="https://cdn.plot.ly/plotly-basic-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.22.0/plotly_renderers.min.js" type="text/javascript"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.6.0/tips_data.min.js type="text/javascript"></script>-->
+
+
+    
+
+
+<div id="select2-drop-mask" class="select2-drop-mask" style="display: none;"></div><div class="select2-drop select2-display-none select2-with-searchbox select2-drop-active" style="left: 250px; width: 260px; top: 34px; bottom: auto; display: none;">   <div class="select2-search">       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">   </div>   <ul class="select2-results"></ul></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-2" tabindex="0" style="display: none;"></ul><div class="modal-backdrop fade in"></div><div class="modal fade in" style="display: block;"><div class="modal-dialog modal-xlg modal-expand modal-full"><div class="modal-content"><div class="modal-header" style="min-height: 40px;"><a href="javascript:void(0)" class="close" title="Close" data-dismiss="modal" aria-label="Close" style="opacity: 1;"><span><i class="fa fa-times" aria-hidden="true"></i></span></a><a href="javascript:void(0)" class="expand" title="Expand"><span><i class="fa fa-expand"></i></span></a><a href="javascript:void(0)" class="expand" title="Popout View" data-dismiss="modal" aria-label="Close"><span><i class="fa fa-external-link"></i></span></a><h7>Yeni Operasyon Değişikliği</h7></div><div class="modal-body"><iframe id="ktvOp" src="./create/SMSS_Operation_Change?af=p_dcc%3A1011%3Bp_dct%3A3&amp;IS_MODAL=true" frameborder="0" width="100%" height="594"></iframe></div></div></div></div></body></html>
